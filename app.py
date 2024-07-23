@@ -1,13 +1,18 @@
+import requests
 import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
 
 
-# Load trained model
-model = pickle.load(open('model.pkl', 'rb'))
+# load  model.pkl dari GitHub
+url = 'https://raw.githubusercontent.com/Syd001978/House-Price-Prediction---Machine-Learning-Lecture/main/model.pkl'  # Ganti dengan URL model.pkl Anda di GitHub
+response = requests.get(url)
+model_bytes = response.content
 
-#Streamlit
+model = pickle.loads(model_bytes)
+
+#streamlit
 st.title('Your House Price Prediction 🏚️')
 
 # Input fitur 
@@ -20,7 +25,6 @@ sqft_living = st.number_input('Area of Building', min_value=0, value=0)
 
 # Tombol Submit
 if st.button('Submit'):
-    # Buat dataframe input
     input_data = pd.DataFrame({
         'bedrooms': [bedrooms],
         'bathrooms': [bathrooms],
