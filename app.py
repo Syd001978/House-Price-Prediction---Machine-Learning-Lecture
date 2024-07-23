@@ -6,7 +6,7 @@ import pickle
 
 
 # load  model.pkl dari GitHub
-url = 'https://raw.githubusercontent.com/Syd001978/House-Price-Prediction---Machine-Learning-Lecture/main/model.pkl'  # Ganti dengan URL model.pkl Anda di GitHub
+url = 'https://raw.githubusercontent.com/Syd001978/House-Price-Prediction---Machine-Learning-Lecture/main/model.pkl'  
 response = requests.get(url)
 model_bytes = response.content
 
