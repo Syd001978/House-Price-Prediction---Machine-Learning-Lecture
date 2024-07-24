@@ -20,7 +20,7 @@ bedrooms = st.number_input('Bedrooms', min_value=1, max_value=10, value=1)
 bathrooms = st.number_input('Bathrooms', min_value=0, max_value=8, value=0)
 floors = st.number_input('Floors', min_value=1, max_value=6, value=1, step=1)  
 yr_built = st.number_input('Year Built', min_value=0, max_value=2100, value=0) 
-sqft_living = st.number_input('Area of Building', min_value=0, value=0)
+sqft_living = st.number_input('Area of Building (SqFt)', min_value=0, value=0)
 
 
 # Tombol Submit
