@@ -37,7 +37,7 @@ if st.button('Submit'):
     prediction = model.predict(input_data)
 
     # Tampilkan prediksi harga
-    st.subheader('Prediksi Harga:')
+    st.subheader('Price Prediction:')
     st.write(f"${prediction[0]:,.2f}")
 
  
